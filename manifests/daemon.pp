@@ -62,7 +62,7 @@ define hyperdex::daemon(
 		mode    => 0755,
 		owner   => "hyperdex",
 		group   => "hyperdex",
-		require => Class["hyperdex::packages"],
+		require => Class["hyperdex::packages::server"],
 	}
 
 	if $listen_address {
@@ -73,7 +73,7 @@ define hyperdex::daemon(
 		command => "/usr/bin/hyperdex daemon -f -D ${_data_directory}${listen_addr_opt} -p ${listen_port} -c ${coordinator_address} -P ${coordinator_port}",
 		user    => "hyperdex",
 		require => [
-			Class["hyperdex::packages"],
+			Class["hyperdex::packages::server"],
 			File[$_data_directory],
 		],
 	}
