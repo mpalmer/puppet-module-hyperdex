@@ -43,6 +43,7 @@ define hyperdex::daemon(
 		$coordinator_port    = 1982,
 		$data_directory      = undef,
 ) {
+	include hyperdex::user
 	include hyperdex::packages::server
 
 	if $data_directory == undef {
