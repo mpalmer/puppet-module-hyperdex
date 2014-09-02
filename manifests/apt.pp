@@ -5,7 +5,7 @@ class hyperdex::apt {
 		key_source => 'http://debian.hyperdex.org/hyperdex.gpg.key'
 	}
 
-	apt::source { "hyoerdex":
+	apt::source { "hyperdex":
 		location    => "http://debian.hyperdex.org",
 		release     => "wheezy",
 		include_src => false;
