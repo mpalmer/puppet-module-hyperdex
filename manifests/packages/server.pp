@@ -9,5 +9,10 @@ class hyperdex::packages::server {
 		}
 	}
 
-	package { ["hyperdex-daemon", "hyperdex-coordinator", "hyperdex-tools"]: }
+	package { [
+		"hyperdex-daemon",
+		"hyperdex-coordinator",
+		"hyperdex-tools",
+		"replicant-tools"]:
+	}
 }
