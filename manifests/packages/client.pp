@@ -9,5 +9,5 @@ class hyperdex::packages::client {
 		}
 	}
 
-	package { ["libhyperdex-client-dev"]: }
+	package { ["libhyperdex-client-dev", "libhyperdex-admin-dev"]: }
 }
